@@ -21,11 +21,11 @@ function convertNumber(n, fromBase, toBase) {
 }
 
 function hexToBin(hex) {
-  return(convertNumber(hex, 16, 2));
+  return convertNumber(hex, 16, 2);
 }
 
 function binToHex(bin) {
-  return(convertNumber(bin, 2, 16));
+  return convertNumber(bin, 2, 16);
 }
 
 function typePrefixOf(type){
