@@ -10,6 +10,24 @@ var LONG_REPEAT = "5c";
 var BYTES = 24;
 var DATA_LENGTH = "3400";
 
+function convertNumber(n, fromBase, toBase) {
+  if (fromBase === void 0) {
+    fromBase = 10;
+  }
+  if (toBase === void 0) {
+    toBase = 10;
+  }
+  return parseInt(n.toString(), fromBase).toString(toBase);
+}
+
+function hex2Bin(hex) {
+  return(convertNumber(hex, 16, 2));
+}
+
+function bin2Hex(bin) {
+  return(convertNumber(bin, 2, 16));
+}
+
 function typePrefixOf(type){
   if(type === "RF433"){
     return RF433;
