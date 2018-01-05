@@ -88,7 +88,7 @@ function getNewCode(b64, repeats){
 function startAnalyzeNexa(){
   var code = $("#usercode").val();
   var hex = base64ToHex(code).replace(/ /g,'');
-  var message = hex.substr(4,6);
+  var message = hex.substr(4,9);
   var bin = hexToBin(message);
   var id =  binToHex(bin.substr(0,26));
   var groupflag = binToHex(bin.substr(26,1));
