@@ -29,6 +29,11 @@ function binToHex(bin) {
   return convertNumber(bin, 2, 16);
 }
 
+function binToDec(bin) {
+  return convertNumber(bin, 2, 10);
+}
+
+
 function typePrefixOf(type){
   if(type === "RF433"){
     return RF433;
@@ -91,7 +96,7 @@ function startAnalyzeNexa(){
   var hex = base64ToHex(code).replace(/ /g,'');
   var message = hex.substr(4,9);
   var bin = hexToBin(message);
-  var id =  binToHex(bin.substr(0,26));
+  var id =  binToDec(bin.substr(0,26));
   var groupflag = binToHex(bin.substr(26,1));
   var onoff = binToHex(bin.substr(27,1));
   var device = binToHex(bin.substr(28,4));
