@@ -90,12 +90,17 @@ function startAnalyzeNexa(){
   var hex = base64ToHex(code).replace(/ /g,'');
   var message = hex.substr(4,6);
   var bin = hexToBin(message);
-  var id =  bin.substr(0,26);
-  var groupflag = bin.substr(26,1);
-  var onoff = bin.substr(27,1);
-  var device = bin.substr(28,4);
-  var dim = bin.substr(32,4)
+  var id =  binToHex(bin.substr(0,26));
+  var groupflag = binToHex(bin.substr(26,1));
+  var onoff = binToHex(bin.substr(27,1));
+  var device = binToHex(bin.substr(28,4));
+  var dim = binToHex(bin.substr(32,4));
   $("#id").val(id);
+  $("#groupflag).val(groupflag);
+  $("#onoff").val(onoff);
+  $("#device").val(device);
+  $("#dim").val(dim);
+  
 }
 /* NEXA:
  * The actual message is 32 bits of data:
