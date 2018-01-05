@@ -21,7 +21,8 @@ function convertNumber(n, fromBase, toBase) {
 }
 
 function hexToBin(hex) {
-  return convertNumber(hex, 16, 2);
+  var length = hex.length * 4;
+  return convertNumber(hex, 16, 2).padStart(length, '0');
 }
 
 function binToHex(bin) {
