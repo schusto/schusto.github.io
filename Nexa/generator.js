@@ -96,7 +96,7 @@ function startAnalyzeNexa(){
   var device = binToHex(bin.substr(28,4));
   var dim = binToHex(bin.substr(32,4));
   $("#id").val(id);
-  $("#groupflag).val(groupflag);
+  $("#groupflag").val(groupflag);
   $("#onoff").val(onoff);
   $("#device").val(device);
   $("#dim").val(dim);
