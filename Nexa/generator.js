@@ -20,11 +20,11 @@ function convertNumber(n, fromBase, toBase) {
   return parseInt(n.toString(), fromBase).toString(toBase);
 }
 
-function hex2Bin(hex) {
+function hexToBin(hex) {
   return(convertNumber(hex, 16, 2));
 }
 
-function bin2Hex(bin) {
+function binToHex(bin) {
   return(convertNumber(bin, 2, 16));
 }
 
